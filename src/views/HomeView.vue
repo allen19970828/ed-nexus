@@ -7,6 +7,78 @@ import ArticleCard from '../components/ArticleCard.vue';
 // 1. 文章資料庫 (模擬)
 const allPosts = [
     {
+        id: 107,
+        title: '認知診斷模型 (CDM)：演進與未來實驗室',
+        excerpt: '從傳統 DINA 到深度學習 NeuralCDM：探索 AI 如何透過 Q-Matrix 診斷學生的認知狀態與技能掌握度。',
+        date: '2025-07-20',
+        category: 'Interactive Lab',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80',
+        link: '/survey-cdm'
+    },
+    {
+        id: 106,
+        title: 'RAG vs Fine-tuning：技術對決實驗室',
+        excerpt: '基於微軟農業案例研究：模擬機制差異、使用權衡模擬器計算最佳策略，並分析實際實驗數據。',
+        date: '2025-07-05',
+        category: 'Interactive Lab',
+        image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80',
+        link: '/rag-ft'
+    },
+    {
+        id: 105,
+        title: '資料包絡分析 (DEA)：效率評估實驗室',
+        excerpt: '透過視覺化圖表探索效率前緣，比較 CCR 與 BCC 模型，並學習如何診斷組織運營效率。',
+        date: '2025-06-20',
+        category: 'Interactive Lab',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+        link: '/dea'
+    },
+    {
+        id: 104,
+        title: '自然語言處理 (NLP)：教育智能實驗室',
+        excerpt: '探索 Transformer 注意力機制如何理解語意，與蘇格拉底式 AI 導師對話，並體驗自動作文批改技術。',
+        date: '2025-06-10',
+        category: 'Interactive Lab',
+        image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80',
+        link: '/nlp'
+    },
+    {
+        id: 103,
+        title: '類神經網路 (ANN)：機器學習實驗室',
+        excerpt: '親手調整神經元的權重與偏差，觀察激活函數 (ReLU/Sigmoid) 的非線性特性，並透視 CNN 如何提取影像特徵。',
+        date: '2025-06-01',
+        category: 'Interactive Lab',
+        image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80',
+        link: '/ann'
+    },
+    {
+        id: 102,
+        title: '古典測驗理論 (CTT)：信度與試題分析',
+        excerpt: '從真分數模型 (O=T+E) 出發，互動式探索信度 (Reliability) 的意義，並親手計算試題的難度與鑑別度。',
+        date: '2025-05-25',
+        category: 'Interactive Lab',
+        image: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=800&q=80',
+        link: '/ctt'
+    },
+    {
+        id: 101,
+        title: '認知診斷模式 (CDM)：DINA/DINO 模擬器',
+        excerpt: '教育測驗理論的進階應用。定義 Q 矩陣，並觀察粗心 (Slip) 與猜測 (Guess) 參數如何影響神經網路的診斷準確度。',
+        date: '2025-05-20',
+        category: 'Interactive Lab',
+        image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80',
+        link: '/cdm'
+    },
+    {
+        id: 100,
+        title: '認識網絡分析 (ENA)：認知結構模擬器',
+        excerpt: '將腦中的思維路徑視覺化。透過互動圖表，比較「高績效」與「低績效」學習者的思考差異。',
+        date: '2025-05-15',
+        category: 'Interactive Lab',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+        link: '/ena'
+    },
+    {
         id: 99,
         title: 'IRT 互動實驗室：視覺化圖表教學',
         excerpt: '親手調整參數，搞懂 Rasch 與 3PL 模型。這是給教育工作者的互動式統計課。',
@@ -15,46 +87,6 @@ const allPosts = [
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
         link: '/irt-lab'
     },
-    {
-        id: 2,
-        title: '元宇宙校園：沉浸式學習新趨勢',
-        excerpt: '虛擬實境 (VR) 如何打破物理限制，讓歷史與化學課變得身歷其境。',
-        date: '2025-04-10',
-        category: 'VR/AR',
-        image: 'https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&q=80'
-    },
-    {
-        id: 3,
-        title: '區塊鏈學歷證書的崛起',
-        excerpt: 'Web3 技術如何確保學歷真實性，並實現終身學習履歷的去中心化。',
-        date: '2025-04-05',
-        category: 'Blockchain',
-        image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80'
-    },
-    {
-        id: 4,
-        title: 'No-Code 開發工具與運算思維',
-        excerpt: '當寫程式變得像拼圖一樣簡單，我們該教孩子的不再是語法，而是邏輯架構。',
-        date: '2025-03-28',
-        category: 'Coding',
-        image: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&q=80'
-    },
-    {
-        id: 5,
-        title: '生成式 AI 繪圖在美術課的應用',
-        excerpt: 'Midjourney 與 Stable Diffusion 如何激發學生的創意，而非抹殺創作靈魂。',
-        date: '2025-03-20',
-        category: 'AI Education',
-        image: 'https://images.unsplash.com/photo-1684469503461-9c3a3b018599?w=800&q=80'
-    },
-    {
-        id: 6,
-        title: 'Web3 錢包：未來的學生證',
-        excerpt: '透過 NFT 技術，打造不可篡改且永久保存的校園參與證明 (POAP)。',
-        date: '2025-03-15',
-        category: 'Blockchain',
-        image: 'https://images.unsplash.com/photo-1642104704074-907c0698cbd9?w=800&q=80'
-    }
 ];
 
 // 2. 篩選邏輯

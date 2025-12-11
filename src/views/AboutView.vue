@@ -4,18 +4,91 @@ import { animate, stagger, inView } from 'motion';
 
 // --- 資料層 ---
 const skills = [
-    { name: '教育測驗與統計', level: 90, icon: 'bi-bar-chart-line', color: 'text-primary-custom' },
-    { name: '認知診斷模型 (CDM)', level: 85, icon: 'bi-diagram-3', color: 'text-secondary-custom' },
-    { name: '數位教學與班級經營', level: 95, icon: 'bi-person-video3', color: 'text-primary-custom' },
-    { name: '音樂科技與電腦音樂', level: 88, icon: 'bi-music-note-beamed', color: 'text-secondary-custom' },
-    { name: '鋼琴演奏與理論作曲', level: 92, icon: 'bi-piano', color: 'text-white' }
-];
+    // --- 數據科學與 AI (Data Science & AI) ---
+    {
+        name: '機器學習 (Machine Learning)',
+        level: 85,
+        icon: 'bi-cpu',
+        color: 'text-primary-custom' // Cyan
+    },
+    {
+        name: '教育資料探勘 (EDM)',
+        level: 90,
+        icon: 'bi-database-gear',
+        color: 'text-primary-custom'
+    },
+    {
+        name: '類神經網路 (Neural Networks)',
+        level: 82,
+        icon: 'bi-diagram-3-fill',
+        color: 'text-secondary-custom' // Purple
+    },
 
+    // --- 心理計量與測驗 (Psychometrics) ---
+    {
+        name: '認知診斷模型 (CDM)',
+        level: 92,
+        icon: 'bi-person-lines-fill',
+        color: 'text-secondary-custom'
+    },
+    {
+        name: '試題反應理論 (IRT)',
+        level: 88,
+        icon: 'bi-graph-up-arrow',
+        color: 'text-white'
+    },
+    {
+        name: '古典測驗理論 (CTT)',
+        level: 95,
+        icon: 'bi-clipboard-data',
+        color: 'text-white'
+    },
+
+    // --- 音樂與科技 (Music & Tech) ---
+    {
+        name: '電腦音樂 (Computer Music)',
+        level: 85,
+        icon: 'bi-soundwave',
+        color: 'text-primary-custom'
+    },
+    {
+        name: '音樂科技 (Music Tech)',
+        level: 88,
+        icon: 'bi-speaker',
+        color: 'text-secondary-custom'
+    },
+    {
+        name: '鋼琴演奏 (Piano)',
+        level: 94,
+        icon: 'bi-music-note-beamed',
+        color: 'text-white'
+    },
+    {
+        name: '理論作曲 (Composition)',
+        level: 90,
+        icon: 'bi-pencil-square',
+        color: 'text-white'
+    },
+
+    // --- 教育實務 (Pedagogy) ---
+    {
+        name: '數位教學 (Digital Teaching)',
+        level: 96,
+        icon: 'bi-laptop',
+        color: 'text-primary-custom'
+    },
+    {
+        name: '班級經營 (Classroom Mgmt)',
+        level: 92,
+        icon: 'bi-people-fill',
+        color: 'text-secondary-custom'
+    }
+];
 const experiences = [
-    { role: '專任研究助理', org: '國立臺中教育大學', period: 'Current', desc: '參與高層次教育測驗計畫，負責數據分析與計畫執行。', type: 'Research' },
-    { role: '代理教師兼導師', org: '臺中市神岡區豐洲國民小學', period: 'History', desc: '一線教學現場，結合數位工具進行班級經營與教學創新。', type: 'Teaching' },
-    { role: '代理教師兼導師', org: '臺中市東勢區石角國民小學', period: 'History', desc: '偏鄉教育實踐，深耕基礎教育與學生輔導。', type: 'Teaching' },
-    { role: '代理教師', org: '臺中市東勢區東勢國民小學', period: 'History', desc: '音樂專科教學，推動藝術與人文素養。', type: 'Music' }
+    { role: '研究助理', org: '國立臺中教育大學', period: 'Current', desc: '參與高層次教育測驗計畫，負責數據分析與計畫執行。', type: 'Research' },
+    { role: '導師', org: '臺中市神岡區豐洲國民小學', period: 'History', desc: '一線教學現場，結合數位工具進行班級經營與教學創新。', type: 'Teaching' },
+    { role: '導師', org: '臺中市東勢區石角國民小學', period: 'History', desc: '偏鄉教育實踐，深耕基礎教育與學生輔導。', type: 'Teaching' },
+    { role: '音樂教師', org: '臺中市東勢區東勢國民小學', period: 'History', desc: '音樂專科教學，推動藝術與人文素養。', type: 'Music' }
 ];
 
 const publications = [
@@ -128,8 +201,8 @@ onMounted(() => {
                             數據與旋律的<br><span class="text-primary-custom glitch-text">跨界指揮家</span>
                         </h1>
                         <p class="lead text-gray-300 mb-4">
-                            從音樂系的感性思維，跨越到教育統計的理性分析。我致力於透過 <strong class="text-white">認知診斷模型 (CDM)</strong> 與 <strong
-                                class="text-white">數位科技</strong>，解構學習的黑盒子。
+                            從音樂人的感性思維，跨越到理科生的理性分析。我致力於透過 <strong class="text-white">新興科技</strong> 與 <strong
+                                class="text-white">古典理論</strong>，解構學習的黑盒子。
                         </p>
                         <div class="d-flex gap-3">
                             <a href="mailto:allen19970828@gmail.com" class="btn btn-primary-custom">聯絡我</a>

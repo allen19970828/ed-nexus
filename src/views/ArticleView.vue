@@ -83,7 +83,7 @@ onUnmounted(() => {
                         <div class="mb-3">
                             <span class="badge badge-cyber rounded-pill me-2">{{ article.meta.category }}</span>
                             <span class="text-muted small"><i class="bi bi-clock me-1"></i>{{ article.meta.readTime
-                                }}</span>
+                            }}</span>
                         </div>
                         <h1 class="display-4 fw-bold mb-3 glitch-text">{{ article.title }}</h1>
                         <div class="d-flex align-items-center text-muted small">
@@ -164,6 +164,57 @@ def ask_tutor(question):
                         <h6 class="text-warning mb-3">/// PROMOTION</h6>
                         <p class="small text-muted">訂閱 Premium 方案以解鎖更多高階教學資源與原始碼下載。</p>
                         <button class="btn btn-sm btn-outline-warning w-100">UPGRADE_</button>
+                    </div>
+
+                    <!-- Related Tools Card -->
+                    <div class="card card-custom p-4 mt-4 border-info">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="#/ena" class="text-decoration-none text-info">
+                                    <i class="bi bi-diagram-3 me-2"></i>認知結構模擬器 (ENA)
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#/cdm" class="text-decoration-none text-success">
+                                    <i class="bi bi-grid-3x3 me-2"></i>Q 矩陣與機率模型 (CDM)
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#/ctt" class="text-decoration-none text-primary-custom">
+                                    <i class="bi bi-calculator me-2"></i>古典測驗理論 (CTT)
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#/ann" class="text-decoration-none text-info">
+                                    <i class="bi bi-cpu me-2"></i>類神經網路 (ANN)
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#/nlp" class="text-decoration-none text-success">
+                                    <i class="bi bi-chat-quote-fill me-2"></i>自然語言處理 (NLP)
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#/dea" class="text-decoration-none text-warning">
+                                    <i class="bi bi-graph-up-arrow me-2"></i>資料包絡分析 (DEA)
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#/survey-cdm" class="text-decoration-none text-purple-custom">
+                                    <i class="bi bi-grid-3x3 me-2"></i>認知診斷模型 (CDM)
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#/rag-ft" class="text-decoration-none text-danger">
+                                    <i class="bi bi-sliders me-2"></i>RAG vs Fine-tuning
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#/irt-intro" class="text-decoration-none text-secondary-custom">
+                                    <i class="bi bi-bar-chart-steps me-2"></i>IRT 參數實驗室
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
