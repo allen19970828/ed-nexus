@@ -155,3 +155,28 @@ a:hover { color: var(--neon-cyan); }
     background: var(--neon-purple);
     color: #fff;
 }
+/* --- 8. SweetAlert2 Cyberpunk Theme --- */
+.swal-cyberpunk.swal2-popup {
+    border: 1px solid var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+    border-radius: 4px; /* Slightly rounded */
+    background: rgba(11, 15, 25, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.swal-cyberpunk .swal2-title {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 2px 2px 0px var(--neon-purple);
+    margin-bottom: 20px;
+}
+
+.swal-cyberpunk .swal2-html-container {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.swal-cyberpunk .swal2-icon.swal2-info {
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+}

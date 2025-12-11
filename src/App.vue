@@ -1,12 +1,26 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+import Swal from 'sweetalert2';
 import { RouterView } from 'vue-router'; // 關鍵：引入 RouterView
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
 
 // 訂閱功能維持在全域
 const handleSubscribe = () => {
-  alert('訂閱功能觸發！');
+  Swal.fire({
+    title: 'SUBSCRIBE',
+    text: '加入 EDTECH NEXUS 週報，掌握最新教育科技趨勢！',
+    icon: 'info',
+    background: 'rgba(0, 0, 0, 0.9)',
+    color: '#fff',
+    confirmButtonText: 'CONFIRM',
+    customClass: {
+      popup: 'swal-cyberpunk',
+      confirmButton: 'btn btn-primary-custom text-white',
+      title: 'glitch-text'
+    },
+    buttonsStyling: false
+  });
 };
 
 // 全域滑鼠特效

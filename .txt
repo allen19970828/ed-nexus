@@ -1,99 +1,18 @@
-<script setup>
-import { ref, onMounted } from 'vue';
-import Swal from 'sweetalert2';
-import { animate, stagger } from 'motion';
+# 1. 確保 dist 資料夾是最新的
+npm run build
 
-// --- 關鍵：引用你剛剛建立的那些組件 ---
-// 如果你的檔案名稱大小寫不同，這裡要改 (例如 HeroSection.vue)
-import Navbar from './components/Navbar.vue';
-import HeroSection from './components/HeroSection.vue';
-import ArticleCard from './components/ArticleCard.vue';
-import Footer from './components/Footer.vue';
+# 2. 這是最關鍵的一步！請進入 dist 資料夾
+cd dist
 
-// --- 模擬文章資料 ---
-const posts = ref([
-  { 
-    id: 1, 
-    title: 'AI 進入教室：是助手還是對手？', 
-    excerpt: '探討 ChatGPT 在 K-12 教育中的實際應用與倫理挑戰，教師該如何轉型？', 
-    date: '2025-04-12',
-    category: 'AI Education',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80'
-  },
-  { 
-    id: 2, 
-    title: '元宇宙校園：沉浸式學習新趨勢', 
-    excerpt: '虛擬實境 (VR) 如何打破物理限制，讓歷史與化學課變得身歷其境。', 
-    date: '2025-04-10',
-    category: 'VR/AR',
-    image: 'https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&q=80'
-  },
-  { 
-    id: 3, 
-    title: '區塊鏈學歷證書的崛起', 
-    excerpt: 'Web3 技術如何確保學歷真實性，並實現終身學習履歷的去中心化。', 
-    date: '2025-04-05',
-    category: 'Blockchain',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80'
-  }
-]);
+# 3. 初始化一個全新的暫存 Git
+git init
 
-// --- 訂閱功能 ---
-const handleSubscribe = () => {
-  Swal.fire({
-    title: '<span class="text-white">加入神經網絡</span>',
-    html: '<span style="color:#cbd5e1">每週獲取最新的教育科技情報</span>',
-    background: '#1e293b',
-    color: '#fff',
-    input: 'email',
-    confirmButtonText: 'Connect',
-    confirmButtonColor: '#06b6d4',
-    customClass: { confirmButton: 'btn btn-primary-custom' }
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({ icon: 'success', title: '連結建立成功', background: '#1e293b', color: '#fff', confirmButtonColor: '#06b6d4' });
-    }
-  });
-};
+# 4. 加入所有檔案
+git add -A
 
-// --- 滾動功能 ---
-const scrollToPosts = () => {
-    const el = document.getElementById('latest-posts');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-};
+# 5. 提交
+git commit -m "deploy"
 
-// --- 動畫 ---
-onMounted(() => {
-    // 導航列進場
-    animate('.navbar', { opacity: [0, 1], y: [-20, 0] }, { duration: 0.8 });
-    // 文章卡片依序進場
-    animate('.article-wrapper', 
-        { opacity: [0, 1], y: [50, 0] }, 
-        { delay: stagger(0.2), duration: 0.6 }
-    );
-});
-</script>
-
-<template>
-  <div class="cyber-grid"></div>
-  <div class="scanlines"></div>
-
-  <Navbar @open-subscribe="handleSubscribe" />
-
-  <HeroSection @scroll-to-posts="scrollToPosts" />
-
-  <section id="latest-posts" class="container py-5" style="margin-top: 50px;">
-    <div class="d-flex align-items-center mb-5">
-      <h2 class="h2 fw-bold mb-0 text-white">最新傳輸 <span class="text-secondary-custom">///</span></h2>
-      <div class="ms-3 flex-grow-1" style="height: 1px; background: rgba(139, 92, 246, 0.3);"></div>
-    </div>
-
-    <div class="row g-4">
-      <div v-for="post in posts" :key="post.id" class="col-md-4 article-wrapper opacity-0">
-        <ArticleCard :post="post" />
-      </div>
-    </div>
-  </section>
-
-  <Footer />
-</template>
+# 6. 強制推送到 GitHub 的 gh-pages 分支
+# (請確認下面的網址是你的 GitHub 儲存庫網址)
+git push -f https://github.com/allen19970828/ed-nexus.git master:gh-pages
